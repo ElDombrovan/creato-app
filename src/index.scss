@@ -1,4 +1,7 @@
-@import './sass/*';
+@import './sass/_abstracts.scss', 
+        './sass/base.scss', 
+        './sass/components.scss', 
+        './sass/layout.scss';
 
 body {
   margin: 0;
