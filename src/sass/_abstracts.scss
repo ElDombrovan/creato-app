@@ -1,10 +1,26 @@
 // variables, mixins, functions, placeholders
 
-$color__primary--black: "#000000";
-$color__secondary--black: "#333333";
-$color__primary--grey: "#BDBDBD";
+$color__white: "FFFFFF";
+$color__black--primary: "#000000";
+$color__black--secondary: "#333333";
+$color__grey--primary: "#BDBDBD";
 
 $font__secondary: 'Gothic A1', sans-serif;
+
+$font-size__small: 12px;
+$font-size__medium: $font-size__small * 2;
+
+$line-height__small: $font-size__small + 3px;
+$line-height__medium: $line-height__small * 2;
+
+
+@mixin button ($btn__font-size, $btn__line-height, $btn__spacing) {
+    font-size: $btn__font-size;
+    line-height: $btn__line-height;
+    letter-spacing: $btn__spacing;
+}
+
+// usage @include button($font-size__small, $line-height__small, 0.2 );
 
 @font-face {
     font-family: 'Mont';
