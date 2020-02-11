@@ -1,6 +1,10 @@
-/*export slidesConfig = [
+export const slidesConfig = [
     {
-        location: "",
-        title: ""
-    }
-]; */
+        location: "Dubai, UAE",
+        title: "Jumehira Villa",
+    },
+    {
+        location: "Quito, Ecuador",
+        title: "Cumbaya Villa",
+    },
+]; 

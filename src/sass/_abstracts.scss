@@ -15,6 +15,14 @@ $font-size__medium: $font-size__small * 2;
 $line-height__small: $font-size__small + 3px;
 $line-height__medium: $line-height__small * 2;
 
+$breakpoints: (
+	xs: 512px,
+	sm: 768px,
+	md: 896px,
+	lg: 1152px,
+	xl: 1280px
+);
+
 /** --- VARIABLES END--- **/
 /** --- MIXINS --- **/
 
@@ -50,6 +58,23 @@ $line-height__medium: $line-height__small * 2;
 }
 
 // usage - @include grid(12, 3); // 12 columns, 10 rows
+
+@mixin breakpoint( $breakpoint ) {
+    @if map-has-key( $breakpoints, $breakpoint ) {
+        @media ( min-width: #{ map-get( $breakpoints, $breakpoint ) } ) {
+            @content;
+        }
+    } @else if type_of( $breakpoint ) == number and unit( $breakpoint ) == px or unit( $breakpoint ) == em or unit( $breakpoint ) == rem {
+        @media (min-width: $breakpoint ) {
+            @content;
+        }
+    } @else {
+        @warn "No value could be retrieved from `#{$breakpoint}`. "
+               + "It is either not defined in the `$breakpoints` map, or it is an invalid number of px, em, or rem.";
+    }
+}
+
+// usage - @include breakpoint(xs) { font-size: 2.2em; }
 
 @font-face {
     font-family: 'Mont';

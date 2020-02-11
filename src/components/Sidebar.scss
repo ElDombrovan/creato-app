@@ -1,3 +1,26 @@
+@import "../sass/abstracts", "../sass/base";
+
 .Sidebar {
     grid-area: sidebar;
+    justify-items: center;
+    /*
+    &__container {
+        @include grid(2, 6);
+        grid-template-areas:
+            'menu menu'
+            'logo logo'
+            'logo logo'
+            'logo logo'
+            'icons icons'
+            'icons icons'
+    }*/
+
+    &__image {
+        &--icon {
+            grid-rows: 1 / span 2;
+        }
+        &--logo {
+            grid-rows: 3 / span 3;
+        }
+    }
 }
