@@ -1,1 +1,6 @@
 // buttons, text, dropdowns etc.
+@import "./abstracts";
+
+button {
+    @include button($font-size__small, $line-height__small, 0.2 );
+}
