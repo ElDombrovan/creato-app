@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import { Grid } from "./Grid.js";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           Learn React
         </a>
       </header>
+      <Grid  />
     </div>
   );
 }
