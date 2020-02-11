@@ -1,5 +1,7 @@
 // variables, mixins, functions, placeholders
 
+/** --- VARIABLES --- **/
+
 $color__white: "FFFFFF";
 $color__black--primary: "#000000";
 $color__black--secondary: "#333333";
@@ -13,6 +15,8 @@ $font-size__medium: $font-size__small * 2;
 $line-height__small: $font-size__small + 3px;
 $line-height__medium: $line-height__small * 2;
 
+/** --- VARIABLES END--- **/
+/** --- MIXINS --- **/
 
 @mixin button ($btn__font-size, $btn__line-height, $btn__spacing) {
     font-size: $btn__font-size;
@@ -20,7 +24,22 @@ $line-height__medium: $line-height__small * 2;
     letter-spacing: $btn__spacing;
 }
 
+@mixin text__styles--primary ($font-style, $font-weight, $font-size, $line-height, $color) {
+    font-style: $font-style;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+}
+
+@mixin text__styles--secondary ($spacing, $text-transform) {
+    letter-spacing: $spacing;
+    text-transform: $text-transform;
+}
+
 // usage - @include button($font-size__small, $line-height__small, 0.2 );
+// usage - @include text__styles--primary(normal, normal, $font-size__small, $line-height__small, $color__black--primary);
+
 
 @mixin grid ($grid__columns, $grid__rows) {
     display: grid;
@@ -43,3 +62,5 @@ $line-height__medium: $line-height__small * 2;
     font-weight: normal;
     font-style: normal;
 }
+
+/** --- MIXINS END --- **/

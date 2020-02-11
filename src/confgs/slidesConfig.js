@@ -1,0 +1,6 @@
+/*export slidesConfig = [
+    {
+        location: "",
+        title: ""
+    }
+]; */

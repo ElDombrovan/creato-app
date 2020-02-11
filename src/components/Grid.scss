@@ -1,5 +1,13 @@
 @import "../sass/abstracts", "../sass/base";
 
 .Grid {
+    min-height: 100vh;
     @include grid(12, 6);
+    grid-template-areas: 
+        'slider slider slider slider slider slider slider slider slider slider sidebar sidebar'
+        'slider slider slider slider slider slider slider slider slider slider sidebar sidebar'
+        'slider slider slider slider slider slider slider slider slider slider sidebar sidebar'
+        'slider slider slider slider slider slider slider slider slider slider sidebar sidebar'
+        'slider slider slider slider slider slider slider slider slider slider sidebar sidebar'
+        'slider slider slider slider slider slider slider slider slider slider sidebar sidebar'
 }
