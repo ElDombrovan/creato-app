@@ -1,5 +1,5 @@
 @import "../sass/abstracts", "../sass/base";
 
 .Grid {
-    display: grid;
+    @include grid(12, 6);
 }

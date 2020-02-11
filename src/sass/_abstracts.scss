@@ -20,7 +20,17 @@ $line-height__medium: $line-height__small * 2;
     letter-spacing: $btn__spacing;
 }
 
-// usage @include button($font-size__small, $line-height__small, 0.2 );
+// usage - @include button($font-size__small, $line-height__small, 0.2 );
+
+@mixin grid ($grid__columns, $grid__rows) {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat($grid__columns, 1fr);
+    grid-template-rows: repeat($grid__rows, 1fr);
+    grid-gap: 0px;
+}
+
+// usage - @include grid(12, 3); // 12 columns, 10 rows
 
 @font-face {
     font-family: 'Mont';
