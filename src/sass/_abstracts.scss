@@ -1,7 +1,10 @@
 // variables, mixins, functions, placeholders
 
-$color__primary: "#000000";
-$color__secondary: "";
+$color__primary--black: "#000000";
+$color__secondary--black: "#333333";
+$color__primary--grey: "#BDBDBD";
+
+$font__secondary: 'Gothic A1', sans-serif;
 
 @font-face {
     font-family: 'Mont';
