@@ -1,7 +1,13 @@
 @import "../sass/abstracts", "../sass/base";
 
 .Grid {
-    min-height: 100vh;
+    @include breakpoint(lg){ padding: 40px;}
+    //min-height: 80vh;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+
     @include grid(12, 6);
     grid-template-areas: 
         'slider slider slider slider slider slider slider slider slider slider sidebar sidebar'
@@ -9,5 +15,5 @@
         'slider slider slider slider slider slider slider slider slider slider sidebar sidebar'
         'slider slider slider slider slider slider slider slider slider slider sidebar sidebar'
         'slider slider slider slider slider slider slider slider slider slider sidebar sidebar'
-        'slider slider slider slider slider slider slider slider slider slider sidebar sidebar';     
+        'slider slider slider slider slider slider slider slider slider slider sidebar sidebar';  
 }

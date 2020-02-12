@@ -1,9 +1,18 @@
-.IconsPanel {
-    display: flex;
-    justify-content: space-between;
+@import '../sass/abstracts';
 
-    .Icon {
-        flex-direction: row;
-        align-content: space-between;
+.IconsPanel {
+    grid-area: icons;
+    align-self: end;
+
+    svg {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 24px 0;
+
+        &:hover {
+            fill: $color__black--secondary;
+
+        }
     }
 }
