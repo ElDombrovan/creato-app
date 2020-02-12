@@ -12,7 +12,7 @@ export const Slider = ({ slides }) => {
 
     useEffect(() => {
         setTimeout(goToNext, 1000);
-    });
+    }, [current]);
 
     if (!Array.isArray(slides) || slides.length <= 0) {
         return null;
@@ -20,14 +20,20 @@ export const Slider = ({ slides }) => {
 
     return(
         <div class="Slider">
-            <section>
+            
                 { slides.map((slide, i) =>(
-                    <div key={slide.title}>
-                        <Text> {slide.location} </Text>
-                        <Text>{slide.title} </Text>
-                    </div>
+                    <section className="Slide" key={slide.title}>
+                        <div className="Slide__info">
+                            <Text className="Slide__info--location"> {slide.location} </Text>
+                            <h2><Text className="Slide__info--title">{slide.title} </Text></h2>                        
+                        </div>
+                        <div className="Slide__content">
+                            <img alt="{alt}" src="#"/>
+                            <button>More info</button>
+                        </div>
+                    </section>
                 ))}
-            </section>
+            
         </div>
     );
 };

@@ -1,14 +1,35 @@
 @import "../sass/abstracts", "../sass/base";
 
-.Slider {
-    grid-area: slider;
+.Slide {
+    $slide: "Slide";
 
-    @include grid(10, 6);
-    grid-template-area: 
-        'slide-info slide-info slide-info slide-info slide-info slide-img slide-img slide-img slide-img slide-img'
-        'slide-info slide-info slide-info slide-info slide-info slide-img slide-img slide-img slide-img slide-img'
-        'slide-info slide-info slide-info slide-info slide-info slide-img slide-img slide-img slide-img slide-img'
-        'slide-info slide-info slide-info slide-info slide-info slide-img slide-img slide-img slide-img slide-img'
-        'slide-info slide-info slide-info slide-info slide-info slide-img slide-img slide-img slide-img slide-img'
-        'slide-num slide-num slide-num slide-num slide-num slide-img slide-img slide-img slide-img slide-img';
+    @at-root &r {
+        grid-row: 1 / span 6;
+        grid-column: 1 /span 10;
+
+        //.Slider .Slide
+        .#{$slide}{ 
+            height: 100%;
+            @include flexbox;
+            flex-wrap: nowrap;
+            flex-direction: row;
+
+            &__info {
+                flex-basis: 50%;
+
+                &--location{
+                    align-self: flex-start;
+                }
+                &--title{
+                    align-self: center;
+                }
+            }
+
+            &__content {
+                flex-basis: 50%;
+            }
+        }
+
+    }
+
 }
