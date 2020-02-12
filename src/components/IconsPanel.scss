@@ -1,0 +1,9 @@
+.IconsPanel {
+    display: flex;
+    justify-content: space-between;
+
+    .Icon {
+        flex-direction: row;
+        align-content: space-between;
+    }
+}

@@ -3,24 +3,18 @@
 .Sidebar {
     grid-area: sidebar;
     justify-items: center;
-    /*
-    &__container {
-        @include grid(2, 6);
-        grid-template-areas:
-            'menu menu'
-            'logo logo'
-            'logo logo'
-            'logo logo'
-            'icons icons'
-            'icons icons'
-    }*/
+    display: grid;
 
     &__image {
         &--icon {
+            grid-column: span 2;
             grid-rows: 1 / span 2;
         }
         &--logo {
+            grid-column: span 2;
             grid-rows: 3 / span 3;
         }
     }
+    
+
 }
