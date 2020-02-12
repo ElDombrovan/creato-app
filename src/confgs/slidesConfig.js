@@ -1,4 +1,4 @@
-export const slidesConfig = [
+export default [
     {
         location: "Dubai, UAE",
         title: "Jumehira Villa",

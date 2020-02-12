@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Text } from "./Text.js";
 
-export const Slider = () => {
+
+export const Slider = ({ slides }) => {
+    const { length } = slides;
+    const [current, setCurrent] = useState(0);
+
+    const goToNext = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    };
+
+    useEffect(() => {
+        setTimeout(goToNext, 1000);
+    });
+
+    if (!Array.isArray(slides) || slides.length <= 0) {
+        return null;
+      }
+
     return(
         <div class="Slider">
-            <p>This is slider area</p>
+            <section>
+                { slides.map((slide, i) =>(
+                    <div key={slide.title}>
+                        <Text> {slide.location} </Text>
+                        <Text>{slide.title} </Text>
+                    </div>
+                ))}
+            </section>
         </div>
     );
 };
