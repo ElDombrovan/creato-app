@@ -59,6 +59,36 @@ $breakpoints: (
 
 // usage - @include grid(12, 3); // 12 columns, 10 rows
 
+
+@mixin flexbox {
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:-webkit-flex;
+    display:flex;
+}
+
+// usage - @include flexbox();
+
+@mixin flex-direction($direction) {
+    @if $direction == column {
+        -webkit-flex-direction:vertical;
+        -moz-flex-direction:vertical;
+        -ms-flex-direction:column;
+        -webkit-flex-direction:column;
+        flex-direction:column;
+    }
+    @else {
+        -webkit-flex-direction:horizontal;
+        -moz-flex-direction:horizontal;
+        -ms-flex-direction:row;
+        -webkit-flex-direction:row;
+        flex-direction:row;
+    }
+ }
+
+ //usage - @include flex-direction(column);
+
 @mixin breakpoint( $breakpoint ) {
     @if map-has-key( $breakpoints, $breakpoint ) {
         @media ( min-width: #{ map-get( $breakpoints, $breakpoint ) } ) {
